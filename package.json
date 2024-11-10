@@ -1,6 +1,6 @@
 {
   "name": "js-main",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Checks if the current module is the main executed module. Works with Bun, Deno and Node.js.",
   "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
   "license": "MIT",
