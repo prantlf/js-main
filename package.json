@@ -1,0 +1,65 @@
+{
+  "name": "js-main",
+  "version": "0.0.1",
+  "description": "Checks if the current module is the main executed module. Works with Bun, Deno and Node.js.",
+  "author": "Ferdinand Prantl <prantlf@gmail.com> (http://prantl.tk)",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/prantlf/js-main/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "http://github.com/prantlf/js-main/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prantlf/js-main.git"
+  },
+  "bugs": {
+    "url": "http://github.com/prantlf/js-main/issues"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "files": [
+    "index.cjs",
+    "index.mjs"
+  ],
+  "type": "module",
+  "module": "index.mjs",
+  "main": "index.cjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    },
+    "./cjs": {
+      "require": "./index.cjs"
+    },
+    "./es": {
+      "import": "./index.mjs"
+    }
+  },
+  "scripts": {
+    "lint": "biome lint *.cjs *.mjs",
+    "test:bun": "bun test/main.cjs && bun test/main.mjs",
+    "test:deno": "deno --allow-read test/main.cjs && deno --allow-read test/main.mjs",
+    "test:node": "node test/main.cjs && node test/main.mjs && node test/cjs/main && node test/mjs/main",
+    "test": "bun run test:bun && bun run test:deno && bun run test:node"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  },
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ],
+  "keywords": [
+    "main",
+    "executable",
+    "bun",
+    "deno",
+    "node",
+    "nodejs",
+    "node-js"
+  ]
+}
