@@ -20,6 +20,9 @@ jobs:
       with:
         bun-version: latest
     - run: bun run test:bun
+    - run: bun i --frozen-lockfile
+    - run: bun run lint
+    - run: bun run test:typescript
 
   test-deno:
     runs-on: ubuntu-latest

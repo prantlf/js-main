@@ -4,9 +4,10 @@ Checks if the current module is the main executed module.
 
 * Supports both ES and CJS modules.
 * Works with Bun, Deno and Node.js.
-* Is as efficient as possible depending on the completeness of `import.meta`.
-* Tiny size - 503 B original, 295 B minified, 216 B gzipped, 193 B brotlied.
+* Includes TypeScript types.
 * Zero dependencies.
+* As efficient as possible depending on the completeness of `import.meta`.
+* Tiny size - 503 B original, 295 B minified, 216 B gzipped, 193 B brotlied.
 
 Node.js version 14 and newer is supported.
 
